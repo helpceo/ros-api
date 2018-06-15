@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import { Button  } from 'antd';
-import shell from 'shelljs';
 import './index.css';
+var shell = require('shelljs');
 
 export class Leishen extends Component {
-    handleClick = () => {
-        // if (!shell.which('git')) {
-        //     shell.echo('Sorry, this script requires git');
-        //     shell.exit(1);
-        // }
-        // if (shell.exec('git -v').code !== 0) {
-        //     shell.echo('Error: Git commit failed');
-        //     shell.exit(1);
-        //   }
+    handleClick = function() {
+        if (!shell.which('git')) {
+            shell.echo('Sorry, this script requires git');
+            shell.exit(1);
+          }
+        if (shell.exec('git --version').code !== 0) {
+            shell.echo('Error: Git commit failed');
+            shell.exit(1);
+        }
         console.log(shell)
     }
     render() {
