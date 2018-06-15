@@ -1,0 +1,20 @@
+{
+  "name": "ros-api-demo",
+  "version": "1.0.0",
+  "description": "这是一个交互式的桌面应用程序, 通过示例代码演示了 ROS 1.0 API 的核心特性",
+  "main": "main.js",
+  "scripts": {
+    "build": "./build.sh"
+  },
+  "repository": "https://github.com/Hz-Ryze/ros-api-demos",
+  "keywords": [
+    "ros",
+    "api",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^2.0.0"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "private": true,
+  "homepage" : "https://github.com/Hz-Ryze/ros-api-demos",
+  "dependencies": {
+    "antd": "^3.6.1",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "shelljs":"^0.8.2"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build ",
+    "eject": "react-scripts eject",
+    "test": "react-app-rewired test --env=jsdom"
+  },
+  "devDependencies": {
+    "babel-plugin-import": "^1.7.0",
+    "react-app-rewired": "^1.5.2"
+  }
+}

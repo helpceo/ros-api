@@ -1,0 +1,11 @@
+.wrap{
+    margin-left: 20px;
+    margin-top: 50px; 
+}
+.wrap p{
+    text-indent:2em;
+}
+.wrap img{
+   width: 800px;
+   height: 120px;
+}
