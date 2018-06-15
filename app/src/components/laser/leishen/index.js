@@ -1,19 +1,13 @@
 import React, { Component } from 'react';
 import { Button  } from 'antd';
 import './index.css';
-var shell = require('shelljs');
-
+const {ipcRenderer} = window.require('electron')
 export class Leishen extends Component {
     handleClick = function() {
-        if (!shell.which('git')) {
-            shell.echo('Sorry, this script requires git');
-            shell.exit(1);
-          }
-        if (shell.exec('git --version').code !== 0) {
-            shell.echo('Error: Git commit failed');
-            shell.exit(1);
-        }
-        console.log(shell)
+        ipcRenderer.on('asynchronous-reply', (event, arg) => {
+            console.log(arg)
+        })
+        ipcRenderer.send('asynchronous-message', 'true')
     }
     render() {
         return (
