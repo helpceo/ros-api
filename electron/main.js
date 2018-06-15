@@ -55,9 +55,14 @@ ipcMain.on('asynchronous-message', (event, arg) => {
             shell.echo('Sorry, this script requires git')
             shell.exit(1)
           }
-        shell.exec('roslaunch ls01d ls01d.launch',function(code, stdout, stderr) {
-            console.log('Program output:', stdout);
-          });
+        shell.exec('roscore',function(code, stdout, stderr) {
+            console.log('Program output:', stdout)
+        })      
+        setTimeout(()=>{            
+            shell.exec('roslaunch ls01d ls01d.launch',function(code, stdout, stderr) { 
+                console.log('Program output:', stdout)
+            })
+        },5000)
     }
     event.sender.send('asynchronous-reply', 'pong1')
   })
