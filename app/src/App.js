@@ -9,6 +9,9 @@ const { SubMenu } = Menu;
 
 
 class App extends Component {
+    componentWillMount() {
+        this.content = <Profile />;
+    }
     handleClick = (e) => {
         if(e.key === "profile"){
             this.content = <Profile />;
